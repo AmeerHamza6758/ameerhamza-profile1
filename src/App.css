@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html {
 	font-size: 14px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
 a {
 	text-decoration: none;
 }
+
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -19,11 +23,13 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
+
 p {
 	color: black;
 	font-size: 1.4rem;
@@ -32,6 +38,7 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.05rem;
 }
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -41,8 +48,9 @@ p {
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
+
 .section-title span {
-	color:#ff8c00;
+	color: #ff8c00;
 }
 
 .cta {
@@ -50,7 +58,7 @@ p {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 3px solid  #ff9d26;
+	border: 3px solid #ff9d26;
 	border-radius: 10px;
 	font-size: 2rem;
 	text-transform: uppercase;
@@ -59,101 +67,90 @@ p {
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
+
 .cta:hover {
 	color: white;
 	background-color: #ff8c00;
 }
+
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
 }
+
 .brand h1 span {
 	color: #ff8c00;
 }
 
 /* ANIMATION KI FRAME KEYS YHA HAN */
 /* NAvbar.css */
-@keyframes hamburger_puls {   
+@keyframes hamburger_puls {
 	0% {
 		opacity: 1;
 		transform: scale(1);
 	}
+
 	100% {
 		opacity: 0;
 		transform: scale(1.5);
 	}
 }
-/*  */
-/* @keyframes text_reveal_box {
-	50% {
-		width: 100%;
-		left: 0;
-	}
-	100% {
-		width: 0;
-		left: 100%;
-	}
-}
-@keyframes text_reveal {
-	100% {
-		color: white;
-	}
-}
-@keyframes text_reveal_name {
-	100% {
-		color: #ff8c00;
-		font-weight: 400;
-	}
-} */
 
 /* Media Query For Tablet */
+@media only screen and (max-width: 768px) {
+/* Hero */
+
+.hero .nav-font h1 {
+	font-size: 4rem !important;
+	margin-left: 2px;
+	overflow: hidden;
+}
+/* End Hero */
+}
+
 @media only screen and (min-width: 768px) {
-	.cta {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
+
 	h1.section-title {
 		font-size: 5rem;
 	}
-
-	/* Hero */
-	#hero h1 {
-		font-size: 7rem;
-	}
-	/* End Hero */
-
 	/* Services Section */
-	#services .service-bottom .service-item {
+	#services .service-bottom .education-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
+
 	/* End Services Section */
 
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
 	}
+
 	#projects .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
+
 	#projects .project-item:nth-child(odd) {
 		flex-direction: row;
 	}
+
 	#projects .project-item {
 		height: 550px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	}
+
 	#projects .all-projects .project-info {
 		height: 100%;
 	}
+
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
-	/* End Project */
 
+	/* End Project */
 
 	/* contact  */
 	#contact .contact {
@@ -163,6 +160,7 @@ p {
 		justify-content: center;
 		min-width: 20vh;
 	}
+
 	#contact .contact-items {
 		width: 100%;
 		display: flex;
@@ -170,33 +168,45 @@ p {
 		justify-content: space-evenly;
 		margin: 0;
 	}
+
 	#contact .contact-item {
 		width: 30%;
 		margin: 0;
 		flex-direction: row;
 	}
+
 	#contact .contact-item .icon {
 		height: 100px;
 		width: 100px;
 	}
+
 	#contact .contact-item .icon img {
 		object-fit: contain;
 	}
+
 	#contact .contact-item .contact-info {
 		width: 100%;
 		text-align: left;
 		padding-left: 20px;
 	}
+
 	/* End contact  */
 }
 
 
+
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
+
 	/* header */
 	#header .hamburger {
 		display: none;
 	}
+
+	.hero .nav-font h1 {
+		font-size: 7rem !important;
+	}
+
 	#header .nav-list ul {
 		position: initial;
 		display: block;
@@ -204,19 +214,23 @@ p {
 		width: fit-content;
 		background-color: transparent;
 	}
+
 	#header .nav-list ul li {
 		display: inline-block;
 	}
+
 	#header .nav-list ul li a {
 		font-size: 1.8rem;
 	}
+
 	#header .nav-list ul a:after {
 		display: none;
 	}
+
 	/* End header */
 
-	#services .service-bottom .service-item {
-		/* flex-basis: 32%; */
+	#services .service-bottom .education-item {
+		flex-basis: 32%;
 		margin: 1.5%;
 		padding: 20px 20px;
 	}
